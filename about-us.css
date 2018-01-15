@@ -1,0 +1,66 @@
+html{
+  height: 100%
+}
+
+
+body {
+  width: 950px;
+  margin: 0 auto;
+  padding-top: 5px;
+  height: 100%;
+  }
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    display: block;
+    width:950px;
+
+
+  }
+
+
+
+#andrewpic{
+  width: 360px;
+  padding-right: 50px;
+
+}
+#ryanpic{
+  width: 360px;
+  padding-right: 50px;
+
+}
+#tommypic{
+  width: 360px;
+  padding-right: 50px;
+}
+#zachimage{
+  width: 360px;
+  padding-right: 50px;
+
+}
+
+h2{
+  font-size: 35px;
+  height: 200px;
+  background-color: #eeeeee;
+
+}
+body{
+  background-image: url("about-usbackground.jpg")
+
+
+}
+
+
+p{
+  float: left;
+  font-size: 30px;
+  font-family: "Kavivanar";
+
+
+}

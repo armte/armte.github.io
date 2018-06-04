@@ -1,0 +1,55 @@
+.main-page {
+  width: 100%;
+  font-family: 'The Girl Next Door';
+  font-weight: bold;
+  font-size: 25px;
+
+}
+
+.wallpaper {
+  width: 100%;
+  background-color: gray;
+  margin: 0;
+}
+
+.weather-box {
+
+  width: 50%;
+  border-style: solid;
+  border-color: 'black';
+  border-width: 10px;
+  border-radius: 22%;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.5);
+  text-align: center;
+ }
+.weather-icon {
+  width: 75%;
+  margin-bottom: 0;
+  position: relative;
+}
+
+.weather-content {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.absent {
+  display: none;
+}
+.weather-content button {
+  text-align: center;
+  padding: 0 8px;
+  height: 30px;
+  font-size: 24px;
+  margin-left: 2px;
+
+  font-weight: bold;
+}
+
+.weather-content button span {
+
+}

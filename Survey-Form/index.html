@@ -1,0 +1,97 @@
+<header>
+  <link href="https://fonts.googleapis.com/css?family=Nobile|Josefin+Sans|Yeseva+One" rel="stylesheet">
+</header>
+<!--Container that holds all the elements in the webpage!-->
+<div class="main container-fluid" id="main">
+  <!--div for the background image that covers the screen!-->
+  <div class="wallpaper" id="wallpaper">
+  </div><!--End wallpaper!-->
+  <!--div that contains the main contents of the page in the white semi-transparent box!-->
+  <div class="content container" id="content">
+    <!--main title of the page!-->
+    <h1 class="title" id="title">
+     Like to Hike
+    </h1>
+    <!--short paragraph describing the service and purpose of the page!-->
+    <p id="description">Like to Hike but want it to be a social experience or looking to find a ride? You're in the right place. Just fill out your hiking likes and location to be matched with other hikers of the same preferences and experience in your area.
+    </p>
+    <!--beginning of form that records the users hiking preferences!-->
+    <form class="survey-form" id="survey-form" method="GET">
+      <div class="form-row row">
+        <label for="name" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">* Name: </label>
+        <input type="text" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-9" id="name" placeholder="Your Name" align="right" required></input>
+      </div><!--end form-row!-->
+      <div class="form-row row">
+        <label for="email" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">* Email: </label>
+        <input type="email" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9" id="email" placeholder="Valid Email" required></input>
+      </div><!--End form-row!-->
+      <h3>Location: </h3>
+      <div class="form-row row">
+        <label for="street" id="street-label" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">Street: </label>
+        <input type="text" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9" id="street" placeholder="Street Address"></input>
+      </div><!--End form-row!-->
+      <div class="form-row row">
+        <label for="city" id="city-label" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">* City: </label>
+        <input type="text" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-9" id="city" placeholder="City" required></input>
+      </div><!--End form-row!-->
+      <div class="form-row row">
+        <label for="state" id="state-label" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">* State: </label>
+        <input type="text" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9" id="state" placeholder="State" required></input>
+      </div><!--End form-row!-->
+      <h3>Hiking Likes: </h3>
+      <div class="form-row row">
+        <label for="hike-type" id="hike-type-label" class="hiking-label col-2 col-sm-3 col-md-3 col-lg-2">Type of Hike: </label>
+        <div class="checkbox-container col-7 offset-3 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-9">
+          <li><input type="checkbox" name="cbox" id="check-1" value="1" oninvalid="this.setCustomValidity('Please check at least one of the boxes to continue')" oninput="setCustomValidity('')" required><label for="check-1">Peaks</label></li>
+          <li><input type="checkbox" name="cbox" id="check-2" value="2" required><label for="check-2">Lakes</label></li>
+          <li><input type="checkbox" name="cbox" id="check-3" value="3" required><label for="check-3">Leisure</label></li>
+          <li><input type="checkbox" name="cbox" id="check-4" value="4" required><label for="check-4">Summer</label></li>
+          <li><input type="checkbox" name="cbox" id="check-5" value="5" required><label for="check-5">Fall</label></li>
+          <li><input type="checkbox" name="cbox" id="check-6" value="6" required><label for="check-6">Winter</label></li>
+          <li><input type="checkbox" name="cbox" id="check-7" value="7" required><label for="check-7">Spring</label></li>
+        </div><!--end of checkbox-container!-->
+      </div><!--End form-row!-->
+      <div class="form-row row">
+        <label for="hike-length" id="hike-length-label" class="label-left col-12 col-sm-3 col-md-3 col-lg-2">Length of Hike: </label>
+        <div class="hike-length col-12 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-9"><label><input type="number" name="min-length" id="min-length" min="0" step="0.1" onchange="document.getElementById('max-length').min=this.value;" required>&nbsp;- <input type="number" name="max-length" id="max-length" min="0" step="0.1" required> miles</label>
+        </div><!--End hike-length!-->
+      </div><!--End form-row!-->
+      <div class="form-row row">
+        <label class="label-left col-12 col-sm-3 col-md-3 col-lg-2" for="travel-time" id="travel-time-label">Maximum Travel Time to Hike: </label>
+        <div class="travel-time col-12 col-sm-8 offset-sm-1 col-md-8 offset-md-1 col-lg-9">
+          <label><input type="number" name="travel-time" id="travel-time" min="0" step="0.5" required> hours</input></label>
+        </div><!--End travel-time-right!-->
+      </div>
+      <div class="form-row row">
+        <label class="label-left col-12 col-sm-3 col-md-3 col-lg-2" for="vehicle" id="vehicle-label">Do you own a vehicle you are willing to carpool with?: </label>
+        <div class="form-group col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9">
+          <select class="form-control" id="dropdown" required>
+            <option value="" disabled selected>--Able to Drive?--</option>
+            <option value="yes">Yes, I have a vehicle I can carpool with</option>
+            <option value="no">No, I'm a passenger</option>
+          </select>
+        </div><!--End form-group!-->
+      </div><!--End form-row !-->
+      <div class="form-row row hidden" id="seatNo">
+        <label class="label-left col-12 col-sm-3 col-md-3 col-lg-2" for="vehicle-seats" id="vehicle-seats-label">How many passengers does your vehicle seat?</label>
+        <input type="number" class="form-control col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9" id="vehicle-seats" step="1" min="1" max="7" placeholder="Number of passenger seats" required></input>
+      </div><!--End form-row!-->
+      <div class="form-row row">
+        <label class="hiking-label col-3 col-sm-3 col-md-3 col-lg-2" for="hiking-level" id="hiking-level-tag">How would you rate your hiking skill?</label>
+        <div class="radio-container col-7 offset-2 col-sm-8 offset-sm-1 col-md-8 col-lg-9">
+          <li><input type="radio" name="skill" required><label>Beginner</label></li>
+          <li><input type="radio" name="skill">Novice</li>
+          <li><input type="radio" name="skill">Amateur</li>
+          <li><input type="radio" name="skill">Expert</li>
+        </div><!--End radio Container!-->
+      </div><!--End form row!-->
+      <div class="form-row row">
+        <label class="label-left col-12 col-sm-3 col-md-3 col-lg-2">Any additional comments or info you'd like us or other hikers to know?</label>
+      <div class="input-group col-12 col-sm-8 offset-sm-1 col-md-8 col-lg-9">
+        <textarea class="form-control" name="comments" id="comments" cols="80" rows="5"></textarea>
+               </div><!--End input-group!-->
+        <input type="submit" class="btn btn-lg" id="submit"></input>
+        </div><!--End form-row!-->
+    </form>
+  </div><!--end content !-->
+</div><!--End main!-->

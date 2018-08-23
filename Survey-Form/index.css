@@ -1,0 +1,189 @@
+
+:root {
+  --mainFontSize: 12px;
+  --h1FontSize: 25px;
+  --h3FontSize: 18px;
+  --pFontSize: 12px;
+  --labelTextAlign: left;
+  --hikeTypeColumns: auto;
+  --responsiveTextAlign: center;
+  --radioFlexDirection: column;
+  --btnFontSize: 16px;
+  --numberInputWidth: 45px;
+  --contentWidth: 90%;
+  --formWidth: 90%;
+
+}
+
+@media(min-width: 576px) {
+  :root {
+  --mainFontSize: 15px;
+  --h1FontSize: 30px;
+  --h3FontSize: 20px;
+  --pFontSize: 14px;
+  --labelTextAlign: right;
+  --hikeTypeColumns: auto auto;
+  --responsiveTextAlign: left;
+  --btnFontSize: 22px;
+  --numberInputWidth: 50px;
+  --contentWidth: 80%;
+  --formWidth: 85%;
+  }
+
+}/*End media query min-width: 576px;*/
+
+@media (min-width: 768px){
+  :root{
+    --radioFlexDirection: row;
+    --pFontSize: 16px;
+  }
+
+  @media (min-width: 992px){
+    :root {
+      --formWidth: 60%;
+    }/*end root*/
+  }/*end media query*/
+
+}/*End media query min-width: 768px;*/
+
+.main {
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  font-size: var(--mainFontSize);
+  padding: 15px;
+
+
+}
+.wallpaper {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url(https://armte.github.io/Survey-Form/img/ghibli-mountains.png) no-repeat;
+  background-size: cover;
+  background-position: 50% 20%;
+  z-index: -1;
+}
+
+.content {
+  position: relative;
+  width: var(--contentWidth);
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.7);
+  align-self: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 30px rgb(255, 255, 255, 1);
+  justify-content: top;
+  align-items: center;
+
+}
+
+h1 {
+  text-align: center;
+  font-family: "Yeseva One", cursive;
+  color: black;
+  font-size: var(--h1FontSize);
+}
+
+h3 {
+  font-size: var(--h3FontSize);
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.content p {
+  font-size: var(--pFontSize);
+  text-align: center;
+  margin: 1% 10%;
+}
+
+form {
+  width: var(--formWidth);
+}
+
+.form-row {
+  width: 100%;
+  margin: 10px 0px;
+  display: flex;
+  align-items: center;
+}
+
+.label-left {
+  text-align: var(--labelTextAlign);
+  font-weight: bold;
+}
+
+.hiking-label {
+  text-align: right;
+  font-weight: bold;
+}
+
+input[type="text"],[type="email"] {
+  min-width: 100px;
+  width: 70%;
+  max-height: 22px;
+  align: right;
+  font-size: var(--mainFontSize);
+}
+
+.checkbox-container {
+  display: grid;
+  grid-template-columns: var(--hikeTypeColumns);
+}
+
+.checkbox-container li {
+  list-style-type: none;
+  text-align: left;
+}
+
+input[type="checkbox"]{
+  margin-right: 3px;
+}
+
+.radio-container {
+  width: 60%;
+  display: flex;
+  flex-direction: var(--radioFlexDirection);
+  justify-content: space-between;
+}
+
+.radio-container li {
+  list-style-type: none !important;
+}
+
+.hike-length {
+  text-align: var(--responsiveTextAlign);
+}
+
+.travel-time input[type="number"], .hike-length input[type="number"]{
+  max-width: 50px;
+  width: var(--numberInputWidth);
+}
+
+.travel-time {
+  text-align: var(--responsiveTextAlign);
+}
+
+select.form-control, input[type="number"].form-control, option, textarea.form-control {
+  font-size: var(--mainFontSize);
+}
+
+.btn {
+  font-family: "Yeseva One", cursive;
+  font-size: var(--btnFontSize);
+  background-color: #1060BB;
+  color: #FFF;
+  margin: 20px auto;
+}
+
+.btn:hover {
+  opacity: 0.8;
+}
+
+.hidden {
+  display: none;
+}
